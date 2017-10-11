@@ -8,7 +8,7 @@ import os
 
 #TODO Change dates to ##/##/#### format
 #TODO Make printouts for Josh
-#TODO Make the loop to print out all of the pages at once
+#TODO Make the loop to print out all of the pages at once.
 
 def importClipBoard():
     date = ''
