@@ -1,11 +1,25 @@
+#!python3
+
+''' Schedule Scrapper and Visit Summary Generator
+
+Simple script to allow the schedular to copy a providers schedule and create a word
+document showing the patient's name, date of visit and the provider's name. It's then used
+as a "scratch pad" for any instructions that the provider would like the patient to remember.
+It's written in python 2.7 to use py2exe to "compile" it for use on all Windows systems. It uses
+python-docx, tkinter and win32api.
+
+'''
+
+import os
+import tkinter
+import tkinter.messagebox
 import docx
 import docx.shared
 import docx.enum.text
-import tkinter
 import win32api
-import tkinter.messagebox
-import os
 
+#TODO Remove Geller
+#TODO Add new provider
 #TODO Change dates to ##/##/#### format
 #TODO Make printouts for Josh
 #TODO Make the loop to print out all of the pages at once.
