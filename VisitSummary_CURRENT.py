@@ -5,7 +5,7 @@
 Simple script to allow the schedular to copy a providers schedule and create a word
 document showing the patient's name, date of visit and the provider's name. It's then used
 as a "scratch pad" for any instructions that the provider would like the patient to remember.
-It's written in python 2.7 to use py2exe to "compile" it for use on all Windows systems. It uses
+It's written in python 3 and uses py2exe to "compile" it for use on all Windows systems. It uses
 python-docx, tkinter and win32api.
 
 '''
