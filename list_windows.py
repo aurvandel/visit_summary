@@ -1,6 +1,7 @@
 import win32gui
 import ctypes
 from pywinauto.findwindows    import find_window
+import pyautogui
 
 EnumWindows = ctypes.windll.user32.EnumWindows
 EnumWindowsProc = ctypes.WINFUNCTYPE(ctypes.c_bool, ctypes.POINTER(ctypes.c_int), ctypes.POINTER(ctypes.c_int))
@@ -26,3 +27,5 @@ handle = icentra[0]
 title = icentra[1]
 
 win32gui.SetForegroundWindow(find_window(title=title))
+
+pyautogui.hotkey('ctrl', 'a')

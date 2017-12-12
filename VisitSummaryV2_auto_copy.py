@@ -19,41 +19,26 @@ import tkinter.messagebox
 import docx
 import docx.enum.text
 import docx.shared
-import pywinauto.findwindows
+import windowmgr
+import pyautogui
 
 import win32api
-import win32gui
+
 
 #TODO Automatically select all from PowerChart window and copy
 #TODO Make the loop to print out all of the pages at once
 
 CWD = os.getcwd()
 
-
-
-EnumWindows = ctypes.windll.user32.EnumWindows
-EnumWindowsProc = ctypes.WINFUNCTYPE(ctypes.c_bool, ctypes.POINTER(ctypes.c_int), ctypes.POINTER(ctypes.c_int))
-GetWindowText = ctypes.windll.user32.GetWindowTextW
-GetWindowTextLength = ctypes.windll.user32.GetWindowTextLengthW
-IsWindowVisible = ctypes.windll.user32.IsWindowVisible
-titles = []
-def foreach_window(hwnd, lParam):
-    if IsWindowVisible(hwnd):
-        length = GetWindowTextLength(hwnd)
-        buff = ctypes.create_unicode_buffer(length + 1)
-        GetWindowText(hwnd, buff, length + 1)
-        titles.append((hwnd, buff.value))
-    return True
-EnumWindows(EnumWindowsProc(foreach_window), 0)
-icentra = []
-for i in range(len(titles)):
-    if "PowerChart" in titles[i][1]:
-        icentra += titles[i]
-handle = icentra[0]
-title = icentra[1]
-win32gui.SetForegroundWindow(pywinauto.findwindows.find_window(title=title))
-
-
+def copy_from_icentra():
+    w = windowmgr.WindowMgr()
+    w.find_window_wildcard("PowerChart")
+    w.set_foreground()
+    w.set_focus()
+    pyautogui.click(821, 233)
+    pyautogui.hotkey('ctrl', 'a')
+    pyautogui.hotkey('ctrl', 'c')
+    return
 
 def import_clip_board():
 
@@ -77,6 +62,7 @@ def import_clip_board():
         'November' : '11',
         'December' : '12',
         }
+    copy_from_icentra()
     clipboard = tkinter.Tk().clipboard_get()  # copy contents of clipboard
     provider = ''
     lst = clipboard.split()
