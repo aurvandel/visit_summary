@@ -8,6 +8,8 @@ as a "scratch pad" for any instructions that the provider would like the patient
 It's written in python 3 and uses py2exe to "compile" it for use on Windows systems. It uses
 python-docx, tkinter and win32api. Will automatically copy the data required to the clipboard
 
+This will only work for a single provider
+
 '''
 
 import os
@@ -24,7 +26,6 @@ import pywinauto
 import win32api
 
 #TODO Make the loop to print out all of the pages at once
-#TODO Find better why to get the date
 
 CWD = os.getcwd()
 
@@ -38,18 +39,18 @@ def copy_from_icentra():
     window.Maximize()
     window.SetFocus()
     window.set_keyboard_focus()
-    window.ClickInput(coords=(141, 316))
-    window.DoubleClick(coords=(141, 316))
+    window.ClickInput(coords=(640, 316))
+    #window.DoubleClick(coords=(141, 316))      # coords(141, 316) click on date picker
     #window.DoubleClick(coords=(141, 316))
-    #window.Wait('active').TypeKeys('^a')
+    window.Wait('active').TypeKeys('^a')
     window.Wait('active').TypeKeys('^c')
     time.sleep(1)                               # have to wait for the clipboard to fill up
     clipboard = tkinter.Tk().clipboard_get()    # copy contents of clipboard to get date
-    window.ClickInput(coords=(640, 339))
-    window.TypeKeys('^a')
-    window.TypeKeys('^c')
-    time.sleep(1)
-    clipboard += tkinter.Tk().clipboard_get()   # copy contents of clipboard to get patients
+    #window.ClickInput(coords=(640, 339))
+    #window.TypeKeys('^a')
+    #window.TypeKeys('^c')
+    #time.sleep(1)
+    #clipboard += tkinter.Tk().clipboard_get()   # copy contents of clipboard to get patients
     return clipboard
 
 def import_clip_board():
