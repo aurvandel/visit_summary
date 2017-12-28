@@ -80,9 +80,14 @@ time_re = re.compile(r'^([0-1]?[0-9]|[2][0-3]):([0-5][0-9])$')
 final_lst = []
 line_list = []
 fin = open('schedule.txt', 'w+')
+exclusions = [
+    'JR,',
+    'SR,',
+    'II,'
+]
 for i in range(len(lst)):
     line = ''
-    if time_re.match(lst[i]): 
+    if time_re.match(lst[i]) and (lst[i + 1] == 'AM' or lst[i + 1] == 'PM'):
         #and (lst[i + 1] == 'AM' or lst[i + 1] == 'PM'):
         new_lst = lst[i:]
         for item in new_lst:
@@ -99,27 +104,42 @@ for i in range(len(lst)):
                 provider, patient, appt_time = '', '', ''
                 if line_list[j] == 'APRN,':
                     provider = "Mark Boyer, FNP"
-                    patient = str(line_list[j + 5]) + str(line_list[j + 6])
+                    if line_list[j] in exclusions:
+                        patient = str(line_list[j + 5]) + str(line_list[j + 7])
+                    else:
+                        patient = str(line_list[j + 5]) + str(line_list[j + 6])
                     appt_time = line_list[0]
                     final_lst.append((appt_time, provider, patient))
                 elif line_list[j] == 'PA-C,':
                     provider = 'Quinn Ranson, PA-C'
-                    patient = str(line_list[j + 5]) + str(line_list[j + 6])
+                    if line_list[j] in exclusions:
+                        patient = str(line_list[j + 5]) + str(line_list[j + 7])
+                    else:
+                        patient = str(line_list[j + 5]) + str(line_list[j + 6])
                     appt_time = line_list[0]
                     final_lst.append((appt_time, provider, patient))
                 elif line_list[j] == 'DNP,':
                     provider = 'Jennifer Fisher, DNP'
-                    patient = str(line_list[j + 5]) + str(line_list[j + 6])
+                    if line_list[j] in exclusions:
+                        patient = str(line_list[j + 5]) + str(line_list[j + 7])
+                    else:
+                        patient = str(line_list[j + 5]) + str(line_list[j + 6])
                     appt_time = line_list[0]
                     final_lst.append((appt_time, provider, patient))
                 elif line_list[j] == 'MD,':
                     provider = 'Kirk Watkins, MD'
-                    patient = str(line_list[j + 5]) + str(line_list[j + 6])
+                    if line_list[j] in exclusions:
+                        patient = str(line_list[j + 5]) + str(line_list[j + 7])
+                    else:
+                        patient = str(line_list[j + 5]) + str(line_list[j + 6])
                     appt_time = line_list[0]
                     final_lst.append((appt_time, provider, patient))
                 elif line_list[j] == 'DXSD': 
                     provider = 'Josh Conner, CRT, RPSGT'
-                    patient = str(line_list[j + 6]) + str(line_list[j + 7])
+                    if line_list[j] in exclusions:
+                        patient = str(line_list[j + 6]) + str(line_list[j + 8])
+                    else:
+                        patient = str(line_list[j + 6]) + str(line_list[j + 7])
                     appt_time = line_list[0]
                     final_lst.append((appt_time, provider, patient))
 #             line_list = []
@@ -127,38 +147,3 @@ for i in range(len(lst)):
 # for t in sortedlst:
 #     print(t)
 fin.close()
-
-import tkinter  # Python 3
-
-def center(win):
-    """
-    centers a tkinter window
-    :param win: the root or Toplevel window to center
-    """
-    win.update_idletasks()
-    width = win.winfo_width()
-    frm_width = win.winfo_rootx() - win.winfo_x()
-    win_width = width + 2 * frm_width
-    height = win.winfo_height()
-    titlebar_height = win.winfo_rooty() - win.winfo_y()
-    win_height = height + titlebar_height + frm_width
-    x = win.winfo_screenwidth() // 2 - win_width // 2
-    y = win.winfo_screenheight() // 2 - win_height // 2
-    win.geometry('{}x{}+{}+{}'.format(width, height, x, y))
-    win.deiconify()
-
-if __name__ == '__main__':
-    root = tkinter.Tk()
-    root.attributes('-alpha', 0.0)
-    menubar = tkinter.Menu(root)
-    filemenu = tkinter.Menu(menubar, tearoff=0)
-    filemenu.add_command(label="Exit", command=root.destroy)
-    menubar.add_cascade(label="File", menu=filemenu)
-    root.config(menu=menubar)
-    frm = tkinter.Frame(root, bd=4, relief='raised')
-    frm.pack(fill='x')
-    lab = tkinter.Label(frm, text='Hello World!', bd=4, relief='sunken')
-    lab.pack(ipadx=4, padx=4, ipady=4, pady=4, fill='both')
-    center(root)
-    root.attributes('-alpha', 1.0)
-    root.mainloop()

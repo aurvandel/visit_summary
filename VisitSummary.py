@@ -19,13 +19,12 @@ import re
 import operator
 import datetime
 import dateutil.rrule as rrule
+import win32com.client as client
 
 import docx
 import docx.enum.text
 import docx.shared
 import pywinauto
-
-import win32api
 
 CWD = os.getcwd()
 
@@ -37,6 +36,7 @@ class InputDate(object):
         self.font = ("Helvetica", 14)
         self.root = Tkinter.Tk()
         #Centers the window
+        self.root.wm_attributes("-topmost", 1)
         self.root.update_idletasks()
         width = self.root.winfo_width()
         height = self.root.winfo_height()
@@ -130,12 +130,24 @@ class InputDate(object):
         '''loops through tkinter window until button is clicked'''
         self.root.mainloop()
 
+
 def getDate(requestMessage):
     '''creates tkinter window to get user input'''
     msgBox = InputDate(requestMessage)
     #loop until the user makes a decision and the window is destroyed
     msgBox.waitForInput()
     return msgBox.getString()
+
+def confirm_date(date):
+    msg = "Is {0} the correct date?".format(date)
+    root = Tkinter.Tk()
+    root.withdraw()
+    if tkMessageBox.askyesno("Confirm Date", msg):
+        root.destroy()
+        return True
+    else:
+        root.destroy()
+        return False
 
 def no_powerchart_error():
     '''Error window shown if PowerChart is not open'''
@@ -187,6 +199,12 @@ def import_clip_board():
     '''Imports the contents of the clipboard, strips it of unneeded values and returns a
     list of tuples, (provider, patient)'''
 
+    exclusions = [
+        'JR,',
+        'SR,',
+        'II,',
+        'III,'
+    ]
     provider = ''
     patient = ''
     new_lst = []
@@ -197,8 +215,7 @@ def import_clip_board():
     lst = clipboard.split()
     for i in range(len(lst)):
         line = ''
-        if time_re.match(lst[i]):
-            #and (lst[i + 1] == 'AM' or lst[i + 1] == 'PM'):
+        if time_re.match(lst[i]) and (lst[i + 1] == 'AM' or lst[i + 1] == 'PM'):
             new_lst = lst[i:]
             for item in new_lst:
                 if item == 'Years,':
@@ -211,23 +228,38 @@ def import_clip_board():
                     provider, patient = '', ''
                     if line_list[j] == 'APRN,':
                         provider = "Mark Boyer, FNP"
-                        patient = str(line_list[j + 5]) + ' ' + str(line_list[j + 6])
+                        if line_list[j + 6] in exclusions:
+                            patient = str(line_list[j + 5]) + ', ' + str(line_list[j + 7])
+                        else:
+                            patient = str(line_list[j + 5]) + ' ' + str(line_list[j + 6])
                         final_lst.append((provider, patient))
                     elif line_list[j] == 'PA-C,':
                         provider = 'Quinn Ranson, PA-C'
-                        patient = str(line_list[j + 5]) + ' ' + str(line_list[j + 6])
+                        if line_list[j + 6] in exclusions:
+                            patient = str(line_list[j + 5]) + ', ' + str(line_list[j + 7])
+                        else:
+                            patient = str(line_list[j + 5]) + ' ' + str(line_list[j + 6])
                         final_lst.append((provider, patient))
                     elif line_list[j] == 'DNP,':
                         provider = 'Jennifer Fisher, DNP'
-                        patient = str(line_list[j + 5]) + ' ' + str(line_list[j + 6])
+                        if line_list[j + 6] in exclusions:
+                            patient = str(line_list[j + 5]) + ', ' + str(line_list[j + 7])
+                        else:
+                            patient = str(line_list[j + 5]) + ' ' + str(line_list[j + 6])
                         final_lst.append((provider, patient))
                     elif line_list[j] == 'MD,':
                         provider = 'Kirk Watkins, MD'
-                        patient = str(line_list[j + 5]) + ' ' + str(line_list[j + 6])
+                        if line_list[j + 6] in exclusions:
+                            patient = str(line_list[j + 5]) + ', ' + str(line_list[j + 7])
+                        else:
+                            patient = str(line_list[j + 5]) + ' ' + str(line_list[j + 6])
                         final_lst.append((provider, patient))
                     elif line_list[j] == 'DXSD':
                         provider = 'Josh Conner, CRT, RPSGT'
-                        patient = str(line_list[j + 6]) + ' ' + str(line_list[j + 7])
+                        if line_list[j + 7] in exclusions:
+                            patient = str(line_list[j + 6]) + ', ' + str(line_list[j + 8])
+                        else:
+                            patient = str(line_list[j + 6]) + ' ' + str(line_list[j + 7])
                         final_lst.append((provider, patient))
                 line_list = []
     final_lst = sorted(final_lst, key=operator.itemgetter(0))
@@ -288,6 +320,19 @@ def create_document(schedule, day):
     save_path = os.path.join(CWD, 'patient.docx')
     doc.save(save_path)
 
+def print_word_document(filename):
+    word = client.Dispatch("Word.Application")
+    word.Documents.Open(filename)
+    word.ActiveDocument.PrintOut()
+    time.sleep(2)
+    word.ActiveDocument.Close()
+    word.Quit()
+
+def all_done_msgbox():
+    root = Tkinter.Tk()
+    root.withdraw()
+    tkMessageBox.showinfo("Visit Summary", "Congratulations! Visit Summaries have all printed.")
+    return
 
 # def delete_paragraph(paragraph):
 #     '''Delete a specific paragraph, currently not used'''
@@ -297,8 +342,12 @@ def create_document(schedule, day):
 
 
 if __name__ == "__main__":
-    day = getDate('Schedule date')
+    flag = False
+    while not flag:
+        day = getDate('Schedule date')
+        flag = confirm_date(day)
     path = os.path.join(CWD, "patient.docx")
     provider_patient = import_clip_board()
     create_document(provider_patient, day)
-    win32api.ShellExecute(0, 'open', path, '', '', 1)
+    print_word_document(path)
+    all_done_msgbox()
