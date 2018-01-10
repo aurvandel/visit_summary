@@ -88,7 +88,6 @@ exclusions = [
 for i in range(len(lst)):
     line = ''
     if time_re.match(lst[i]) and (lst[i + 1] == 'AM' or lst[i + 1] == 'PM'):
-        #and (lst[i + 1] == 'AM' or lst[i + 1] == 'PM'):
         new_lst = lst[i:]
         for item in new_lst:
             if item == 'Years,':
@@ -96,7 +95,7 @@ for i in range(len(lst)):
             else:
                 line += item + ' '
         line += '\n'
-        if 'Block' not in line:
+        if 'Block' not in line or 'DX Sleep' not in line:
             fin.write(line)
         if 'DX Sleep' not in line:
             line_list = line.split()

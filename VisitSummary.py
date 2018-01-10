@@ -10,21 +10,21 @@ python-docx, tkinter and win32api. Will automatically copy the data required to 
 
 '''
 
-import os
-import sys
-import Tkinter
-import tkMessageBox
-import time
-import re
-import operator
 import datetime
-import dateutil.rrule as rrule
-import win32com.client as client
+import operator
+import os
+import re
+import sys
+import time
+import tkinter as Tkinter
+from tkinter import messagebox as tkMessageBox
 
+import dateutil.rrule as rrule
 import docx
 import docx.enum.text
 import docx.shared
 import pywinauto
+import win32com.client as client
 
 CWD = os.getcwd()
 
@@ -65,7 +65,7 @@ class InputDate(object):
         r = self.frame
         instructions = Tkinter.Label(r, text='Please have iCentra\'s Ambulatory Organizer window open.\
  For tomorrow\'s schedule click Tomorrow, otherwise, input the date of the schedule you\'re working on\
- and click OK.' , wraplength=400)
+ and click OK.', wraplength=400)
         instructions.pack(side='top', pady=5)
         k = Tkinter.Label(r, text=requestMessage, font=self.font, padx=5)
         k.pack(side='left', pady=5)
@@ -139,6 +139,7 @@ def getDate(requestMessage):
     return msgBox.getString()
 
 def confirm_date(date):
+    '''creates tkinter window to confirm date'''
     msg = "Is {0} the correct date?".format(date)
     root = Tkinter.Tk()
     root.withdraw()
@@ -225,6 +226,8 @@ def import_clip_board():
             if 'DX Sleep' not in line:
                 line_list = line.split()
                 for j in range(len(line_list)):
+                    if 'No' in line_list and 'appointments' in line_list:
+                        break
                     provider, patient = '', ''
                     if line_list[j] == 'APRN,':
                         provider = "Mark Boyer, FNP"
@@ -321,6 +324,7 @@ def create_document(schedule, day):
     doc.save(save_path)
 
 def print_word_document(filename):
+    '''Opens the document in Word, prints it and closes Word'''
     word = client.Dispatch("Word.Application")
     word.Documents.Open(filename)
     word.ActiveDocument.PrintOut()
@@ -329,6 +333,7 @@ def print_word_document(filename):
     word.Quit()
 
 def all_done_msgbox():
+    '''Message box to alert the user that the papers have been printed'''
     root = Tkinter.Tk()
     root.withdraw()
     tkMessageBox.showinfo("Visit Summary", "Congratulations! Visit Summaries have all printed.")
@@ -339,7 +344,6 @@ def all_done_msgbox():
 #     p = paragraph._element
 #     p.getparent().remove(p)
 #     p._p = p._element = None
-
 
 if __name__ == "__main__":
     flag = False

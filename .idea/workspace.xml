@@ -2,65 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bbf50ea-6d32-4942-a16a-ce083db40595" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TESTS/Accredited Center logo.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TESTS/DRSDC and AASM.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TESTS/DRSDC_V_3CPT.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TESTS/Visit Summary.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TESTS/VisitSummary.spec" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TESTS/VisitSummaryV1.1.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TESTS/VisitSummaryV1.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TESTS/Visit_Summary_docx.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TESTS/Visit_Summary_docx2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TESTS/Visit_Summary_docx_beta-TEST.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TESTS/Visit_Summary_docx_beta.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TESTS/help.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TESTS/patient.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TESTS/template.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TESTS/test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TESTS/tkinter" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VisitSummaryV2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VisitSummaryV2_auto_cop_singley.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VisitSummaryV3_auto_copy_muliti.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VisitSummary_CURRENT.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/calander.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clipboard-formatted.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clipboard.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/help.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/list_windows.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/updatePythonModules.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/Accredited Center logo.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/DRSDC and AASM.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/DRSDC_V_3CPT.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/TESTS/Accredited Center logo.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/TESTS/DRSDC and AASM.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/TESTS/DRSDC_V_3CPT.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/TESTS/Visit Summary.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/TESTS/VisitSummary.spec" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/TESTS/VisitSummaryV1.1.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/TESTS/VisitSummaryV1.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/TESTS/Visit_Summary_docx.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/TESTS/Visit_Summary_docx2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/TESTS/Visit_Summary_docx_beta-TEST.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/TESTS/Visit_Summary_docx_beta.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/TESTS/help.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/TESTS/patient.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/TESTS/template.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/TESTS/test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/TESTS/tkinter" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/VisitSummaryV2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/VisitSummary_CURRENT.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/calander.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/help.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/patient.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/sandbox.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/template.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visitsummary/updatePythonModules.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/windowmgr.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient.docx" afterPath="$PROJECT_DIR$/patient.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vscode/settings.json" afterPath="$PROJECT_DIR$/.vscode/settings.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox.py" afterPath="$PROJECT_DIR$/sandbox.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/Visit-Summary.iml" afterPath="$PROJECT_DIR$/.idea/Visit-Summary.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/sandbox.py" afterPath="$PROJECT_DIR$/sandbox.py" />
+      <change beforePath="$PROJECT_DIR$/schedule.txt" afterPath="$PROJECT_DIR$/schedule.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,14 +19,15 @@
     <SUITE FILE_PATH="coverage/Visit_Summary$VisitSummary_CURRENT.coverage" NAME="VisitSummary_CURRENT Coverage Results" MODIFIED="1512755119726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Visit_Summary$VisitSummaryV3_auto_copy_muliti.coverage" NAME="VisitSummaryV3_auto_copy_muliti Coverage Results" MODIFIED="1513728495239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Visit_Summary$VisitSummaryV3.coverage" NAME="VisitSummaryV3 Coverage Results" MODIFIED="1513730236873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Visit_Summary$sandbox.coverage" NAME="sandbox Coverage Results" MODIFIED="1515607527935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VisitSummaryV3.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/VisitSummaryV3.py">
+      <file leaf-file-name="VisitSummary.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/VisitSummary.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="82" column="27" lean-forward="false" selection-start-line="82" selection-start-column="27" selection-end-line="82" selection-end-column="27" />
+            <state relative-caret-position="731">
+              <caret line="43" column="65" lean-forward="true" selection-start-line="43" selection-start-column="65" selection-end-line="43" selection-end-column="65" />
               <folding>
                 <element signature="e#525#534#0" expanded="true" />
               </folding>
@@ -88,19 +35,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>fin</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -110,8 +50,8 @@
       <list>
         <option value="$PROJECT_DIR$/VisitSummary_CURRENT.py" />
         <option value="$PROJECT_DIR$/VisitSummaryV3_auto_copy_muliti.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/VisitSummaryV3.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
@@ -122,10 +62,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1726" />
-    <option name="y" value="-17" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1696" />
-    <option name="height" value="1066" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -142,6 +82,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,13 +94,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Python27/Lib/site-packages" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
@@ -174,7 +114,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.VisitSummaryV3">
+  <component name="RunManager" selected="Python.sandbox">
     <configuration name="VisitSummaryV3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -192,6 +132,7 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="VisitSummaryV3_auto_copy_muliti" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -210,6 +151,7 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="VisitSummary_CURRENT" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -228,22 +170,47 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
-    <list size="3">
+    <configuration name="sandbox" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Visit-Summary" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sandbox.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.VisitSummary_CURRENT" />
       <item index="1" class="java.lang.String" itemvalue="Python.VisitSummaryV3_auto_copy_muliti" />
       <item index="2" class="java.lang.String" itemvalue="Python.VisitSummaryV3" />
+      <item index="3" class="java.lang.String" itemvalue="Python.sandbox" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.VisitSummaryV3" />
-        <item index="1" class="java.lang.String" itemvalue="Python.VisitSummaryV3_auto_copy_muliti" />
-        <item index="2" class="java.lang.String" itemvalue="Python.VisitSummary_CURRENT" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.sandbox" />
+        <item index="1" class="java.lang.String" itemvalue="Python.VisitSummaryV3" />
+        <item index="2" class="java.lang.String" itemvalue="Python.VisitSummaryV3_auto_copy_muliti" />
+        <item index="3" class="java.lang.String" itemvalue="Python.VisitSummary_CURRENT" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -256,27 +223,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1672" y="-8" width="1696" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2683374" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27083334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31578946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31578946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28141782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28141782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +257,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/VisitSummaryV3.py">
+    <entry file="file://$PROJECT_DIR$/VisitSummary.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -300,12 +267,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/VisitSummaryV3.py" />
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VisitSummaryV3.py" />
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -323,20 +302,42 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VisitSummaryV3_auto_copy_muliti.py" />
+    <entry file="file://$PROJECT_DIR$/VisitSummaryV3.py" />
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VisitSummaryV3.py">
+    <entry file="file://C:/Python34/Lib/site-packages/docx.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="82" column="27" lean-forward="false" selection-start-line="82" selection-start-column="27" selection-end-line="82" selection-end-column="27" />
+        <state relative-caret-position="-1717">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/schedule.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="81" column="3" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VisitSummary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="65" lean-forward="true" selection-start-line="43" selection-start-column="65" selection-end-line="43" selection-end-column="65" />
           <folding>
             <element signature="e#525#534#0" expanded="true" />
           </folding>
