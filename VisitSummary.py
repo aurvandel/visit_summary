@@ -39,6 +39,10 @@ class InputDate(object):
     def __init__(self, requestMessage):
         self.font = ("Helvetica", 14)
         self.root = Tkinter.Tk()
+        menubar = Tkinter.Menu(self.root)
+        filemenu = Tkinter.Menu(menubar, tearoff=0)
+        filemenu.add_command(label="New", command=self.gettext)
+        self.root.config(menu=menubar)
         #Centers the window
         self.root.wm_attributes("-topmost", 1)
         self.root.update_idletasks()

@@ -4,6 +4,7 @@
     <list default="true" id="8bbf50ea-6d32-4942-a16a-ce083db40595" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/VisitSummary.py" afterPath="$PROJECT_DIR$/VisitSummary.py" />
+      <change beforePath="$PROJECT_DIR$/sandbox.1.py" afterPath="$PROJECT_DIR$/sandbox.1.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,28 +21,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="VisitSummary.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VisitSummary.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VisitSummary.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="965">
-              <caret line="372" column="18" lean-forward="true" selection-start-line="372" selection-start-column="18" selection-end-line="372" selection-end-column="18" />
+            <state relative-caret-position="-6">
+              <caret line="52" column="64" lean-forward="true" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
               <folding>
                 <element signature="e#679#694#0" expanded="true" />
-                <element signature="e#1012#4840#0" expanded="false" />
-                <element signature="e#2605#3198#0" expanded="false" />
-                <element signature="e#3232#3400#0" expanded="false" />
-                <element signature="e#3438#3727#0" expanded="false" />
-                <element signature="e#3770#4462#0" expanded="false" />
-                <element signature="e#4495#4609#0" expanded="false" />
-                <element signature="e#4644#4715#0" expanded="false" />
-                <element signature="e#4753#4840#0" expanded="false" />
-                <element signature="e#6341#6552#0" expanded="false" />
-                <element signature="e#6582#6868#0" expanded="false" />
-                <element signature="e#6901#7243#0" expanded="false" />
-                <element signature="e#7278#7667#0" expanded="false" />
-                <element signature="e#14017#14258#0" expanded="false" />
-                <element signature="e#14260#14294#0" expanded="false" />
+                <element signature="e#2802#3395#0" expanded="false" />
+                <element signature="e#3429#3597#0" expanded="false" />
+                <element signature="e#3635#3924#0" expanded="false" />
+                <element signature="e#3967#4659#0" expanded="false" />
+                <element signature="e#4692#4806#0" expanded="false" />
+                <element signature="e#4841#4912#0" expanded="false" />
+                <element signature="e#4950#5037#0" expanded="false" />
+                <element signature="e#5075#6503#0" expanded="false" />
+                <element signature="e#6538#6749#0" expanded="false" />
+                <element signature="e#6779#7065#0" expanded="false" />
+                <element signature="e#7098#7440#0" expanded="false" />
+                <element signature="e#7475#7864#0" expanded="false" />
+                <element signature="e#14214#14455#0" expanded="false" />
+                <element signature="e#14457#14491#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sandbox.1.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sandbox.1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,8 +83,8 @@
         <option value="$PROJECT_DIR$/VisitSummaryV3.py" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/holidays.txt" />
-        <option value="$PROJECT_DIR$/sandbox.1.py" />
         <option value="$PROJECT_DIR$/VisitSummary.py" />
+        <option value="$PROJECT_DIR$/sandbox.1.py" />
       </list>
     </option>
   </component>
@@ -136,7 +147,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.VisitSummary">
+  <component name="RunManager" selected="Python.sandbox.1">
     <configuration name="VisitSummary" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -239,8 +250,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.VisitSummary" />
-        <item index="1" class="java.lang.String" itemvalue="Python.sandbox.1" />
+        <item index="0" class="java.lang.String" itemvalue="Python.sandbox.1" />
+        <item index="1" class="java.lang.String" itemvalue="Python.VisitSummary" />
         <item index="2" class="java.lang.String" itemvalue="Python.sandbox" />
         <item index="3" class="java.lang.String" itemvalue="Python.VisitSummaryV3" />
         <item index="4" class="java.lang.String" itemvalue="Python.VisitSummaryV3_auto_copy_muliti" />
@@ -268,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516404850048</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update">
+      <created>1516405119253</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1516405119253</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -317,20 +335,20 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#679#694#0" expanded="true" />
-            <element signature="e#1012#4840#0" expanded="false" />
-            <element signature="e#2605#3198#0" expanded="false" />
-            <element signature="e#3232#3400#0" expanded="false" />
-            <element signature="e#3438#3727#0" expanded="false" />
-            <element signature="e#3770#4462#0" expanded="false" />
-            <element signature="e#4495#4609#0" expanded="false" />
-            <element signature="e#4644#4715#0" expanded="false" />
-            <element signature="e#4753#4840#0" expanded="false" />
-            <element signature="e#6341#6552#0" expanded="false" />
-            <element signature="e#6582#6868#0" expanded="false" />
-            <element signature="e#6901#7243#0" expanded="false" />
-            <element signature="e#7278#7667#0" expanded="false" />
-            <element signature="e#14017#14258#0" expanded="false" />
-            <element signature="e#14260#14294#0" expanded="false" />
+            <element signature="e#2802#3395#0" expanded="false" />
+            <element signature="e#3429#3597#0" expanded="false" />
+            <element signature="e#3635#3924#0" expanded="false" />
+            <element signature="e#3967#4659#0" expanded="false" />
+            <element signature="e#4692#4806#0" expanded="false" />
+            <element signature="e#4841#4912#0" expanded="false" />
+            <element signature="e#4950#5037#0" expanded="false" />
+            <element signature="e#5075#6503#0" expanded="false" />
+            <element signature="e#6538#6749#0" expanded="false" />
+            <element signature="e#6779#7065#0" expanded="false" />
+            <element signature="e#7098#7440#0" expanded="false" />
+            <element signature="e#7475#7864#0" expanded="false" />
+            <element signature="e#14214#14455#0" expanded="false" />
+            <element signature="e#14457#14491#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -341,20 +359,20 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#679#694#0" expanded="true" />
-            <element signature="e#1012#4840#0" expanded="false" />
-            <element signature="e#2605#3198#0" expanded="false" />
-            <element signature="e#3232#3400#0" expanded="false" />
-            <element signature="e#3438#3727#0" expanded="false" />
-            <element signature="e#3770#4462#0" expanded="false" />
-            <element signature="e#4495#4609#0" expanded="false" />
-            <element signature="e#4644#4715#0" expanded="false" />
-            <element signature="e#4753#4840#0" expanded="false" />
-            <element signature="e#6341#6552#0" expanded="false" />
-            <element signature="e#6582#6868#0" expanded="false" />
-            <element signature="e#6901#7243#0" expanded="false" />
-            <element signature="e#7278#7667#0" expanded="false" />
-            <element signature="e#14017#14258#0" expanded="false" />
-            <element signature="e#14260#14294#0" expanded="false" />
+            <element signature="e#2802#3395#0" expanded="false" />
+            <element signature="e#3429#3597#0" expanded="false" />
+            <element signature="e#3635#3924#0" expanded="false" />
+            <element signature="e#3967#4659#0" expanded="false" />
+            <element signature="e#4692#4806#0" expanded="false" />
+            <element signature="e#4841#4912#0" expanded="false" />
+            <element signature="e#4950#5037#0" expanded="false" />
+            <element signature="e#5075#6503#0" expanded="false" />
+            <element signature="e#6538#6749#0" expanded="false" />
+            <element signature="e#6779#7065#0" expanded="false" />
+            <element signature="e#7098#7440#0" expanded="false" />
+            <element signature="e#7475#7864#0" expanded="false" />
+            <element signature="e#14214#14455#0" expanded="false" />
+            <element signature="e#14457#14491#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -365,20 +383,20 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#679#694#0" expanded="true" />
-            <element signature="e#1012#4840#0" expanded="false" />
-            <element signature="e#2605#3198#0" expanded="false" />
-            <element signature="e#3232#3400#0" expanded="false" />
-            <element signature="e#3438#3727#0" expanded="false" />
-            <element signature="e#3770#4462#0" expanded="false" />
-            <element signature="e#4495#4609#0" expanded="false" />
-            <element signature="e#4644#4715#0" expanded="false" />
-            <element signature="e#4753#4840#0" expanded="false" />
-            <element signature="e#6341#6552#0" expanded="false" />
-            <element signature="e#6582#6868#0" expanded="false" />
-            <element signature="e#6901#7243#0" expanded="false" />
-            <element signature="e#7278#7667#0" expanded="false" />
-            <element signature="e#14017#14258#0" expanded="false" />
-            <element signature="e#14260#14294#0" expanded="false" />
+            <element signature="e#2802#3395#0" expanded="false" />
+            <element signature="e#3429#3597#0" expanded="false" />
+            <element signature="e#3635#3924#0" expanded="false" />
+            <element signature="e#3967#4659#0" expanded="false" />
+            <element signature="e#4692#4806#0" expanded="false" />
+            <element signature="e#4841#4912#0" expanded="false" />
+            <element signature="e#4950#5037#0" expanded="false" />
+            <element signature="e#5075#6503#0" expanded="false" />
+            <element signature="e#6538#6749#0" expanded="false" />
+            <element signature="e#6779#7065#0" expanded="false" />
+            <element signature="e#7098#7440#0" expanded="false" />
+            <element signature="e#7475#7864#0" expanded="false" />
+            <element signature="e#14214#14455#0" expanded="false" />
+            <element signature="e#14457#14491#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -452,14 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox.1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="19" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python34/Lib/site-packages/pywinauto/application.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8853">
@@ -470,25 +480,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/VisitSummary.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="965">
-          <caret line="372" column="18" lean-forward="true" selection-start-line="372" selection-start-column="18" selection-end-line="372" selection-end-column="18" />
+        <state relative-caret-position="-6">
+          <caret line="52" column="64" lean-forward="true" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
           <folding>
             <element signature="e#679#694#0" expanded="true" />
-            <element signature="e#1012#4840#0" expanded="false" />
-            <element signature="e#2605#3198#0" expanded="false" />
-            <element signature="e#3232#3400#0" expanded="false" />
-            <element signature="e#3438#3727#0" expanded="false" />
-            <element signature="e#3770#4462#0" expanded="false" />
-            <element signature="e#4495#4609#0" expanded="false" />
-            <element signature="e#4644#4715#0" expanded="false" />
-            <element signature="e#4753#4840#0" expanded="false" />
-            <element signature="e#6341#6552#0" expanded="false" />
-            <element signature="e#6582#6868#0" expanded="false" />
-            <element signature="e#6901#7243#0" expanded="false" />
-            <element signature="e#7278#7667#0" expanded="false" />
-            <element signature="e#14017#14258#0" expanded="false" />
-            <element signature="e#14260#14294#0" expanded="false" />
+            <element signature="e#2802#3395#0" expanded="false" />
+            <element signature="e#3429#3597#0" expanded="false" />
+            <element signature="e#3635#3924#0" expanded="false" />
+            <element signature="e#3967#4659#0" expanded="false" />
+            <element signature="e#4692#4806#0" expanded="false" />
+            <element signature="e#4841#4912#0" expanded="false" />
+            <element signature="e#4950#5037#0" expanded="false" />
+            <element signature="e#5075#6503#0" expanded="false" />
+            <element signature="e#6538#6749#0" expanded="false" />
+            <element signature="e#6779#7065#0" expanded="false" />
+            <element signature="e#7098#7440#0" expanded="false" />
+            <element signature="e#7475#7864#0" expanded="false" />
+            <element signature="e#14214#14455#0" expanded="false" />
+            <element signature="e#14457#14491#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox.1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
