@@ -375,5 +375,5 @@ if __name__ == "__main__":
     path = os.path.join(CWD, "patient.docx")
     provider_patient = import_clip_board()
     create_document(provider_patient, day)
-    #print_word_document(path)
+    print_word_document(path)
     done()
