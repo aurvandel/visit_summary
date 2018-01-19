@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bbf50ea-6d32-4942-a16a-ce083db40595" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/holidays.txt" />
       <change beforePath="$PROJECT_DIR$/.idea/Visit-Summary.iml" afterPath="$PROJECT_DIR$/.idea/Visit-Summary.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/sandbox.py" afterPath="$PROJECT_DIR$/sandbox.py" />
-      <change beforePath="$PROJECT_DIR$/schedule.txt" afterPath="$PROJECT_DIR$/schedule.txt" />
+      <change beforePath="$PROJECT_DIR$/VisitSummary.py" afterPath="$PROJECT_DIR$/VisitSummary.py" />
+      <change beforePath="$PROJECT_DIR$/patient.docx" afterPath="$PROJECT_DIR$/patient.docx" />
+      <change beforePath="$PROJECT_DIR$/sandbox.1.py" afterPath="$PROJECT_DIR$/sandbox.1.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,14 +24,29 @@
     <SUITE FILE_PATH="coverage/Visit_Summary$sandbox.coverage" NAME="sandbox Coverage Results" MODIFIED="1515607527935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="VisitSummary.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VisitSummary.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="43" column="65" lean-forward="true" selection-start-line="43" selection-start-column="65" selection-end-line="43" selection-end-column="65" />
+            <state relative-caret-position="1530">
+              <caret line="216" column="44" lean-forward="true" selection-start-line="216" selection-start-column="44" selection-end-line="216" selection-end-column="44" />
               <folding>
-                <element signature="e#525#534#0" expanded="true" />
+                <element signature="e#679#694#0" expanded="true" />
+                <element signature="e#1012#4840#0" expanded="false" />
+                <element signature="e#2605#3198#0" expanded="false" />
+                <element signature="e#3232#3400#0" expanded="false" />
+                <element signature="e#3438#3727#0" expanded="false" />
+                <element signature="e#3770#4462#0" expanded="false" />
+                <element signature="e#4495#4609#0" expanded="false" />
+                <element signature="e#4644#4715#0" expanded="false" />
+                <element signature="e#4753#4840#0" expanded="false" />
+                <element signature="e#6341#6552#0" expanded="false" />
+                <element signature="e#6582#6868#0" expanded="false" />
+                <element signature="e#6901#7243#0" expanded="false" />
+                <element signature="e#7278#7667#0" expanded="false" />
+                <element signature="e#11852#13976#0" expanded="false" />
+                <element signature="e#14017#14258#0" expanded="false" />
+                <element signature="e#14260#14294#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -40,7 +57,15 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>fin</find>
+      <find>datetime</find>
+      <find>)</find>
+      <find>'''</find>
+      <find>withdraw</find>
+      <find>self.backend.name</find>
     </findStrings>
+    <replaceStrings>
+      <replace>&quot;&quot;&quot;</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,6 +77,9 @@
         <option value="$PROJECT_DIR$/VisitSummaryV3_auto_copy_muliti.py" />
         <option value="$PROJECT_DIR$/VisitSummaryV3.py" />
         <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/holidays.txt" />
+        <option value="$PROJECT_DIR$/sandbox.1.py" />
+        <option value="$PROJECT_DIR$/VisitSummary.py" />
       </list>
     </option>
   </component>
@@ -114,7 +142,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sandbox">
+  <component name="RunManager" selected="Python.VisitSummary">
+    <configuration name="VisitSummary" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Visit-Summary" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VisitSummary.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="VisitSummaryV3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -153,25 +199,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="VisitSummary_CURRENT" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Visit-Summary" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VisitSummary_CURRENT.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="sandbox" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -191,18 +218,38 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Python.VisitSummary_CURRENT" />
-      <item index="1" class="java.lang.String" itemvalue="Python.VisitSummaryV3_auto_copy_muliti" />
-      <item index="2" class="java.lang.String" itemvalue="Python.VisitSummaryV3" />
-      <item index="3" class="java.lang.String" itemvalue="Python.sandbox" />
+    <configuration name="sandbox.1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Visit-Summary" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sandbox.1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.VisitSummaryV3_auto_copy_muliti" />
+      <item index="1" class="java.lang.String" itemvalue="Python.VisitSummaryV3" />
+      <item index="2" class="java.lang.String" itemvalue="Python.sandbox" />
+      <item index="3" class="java.lang.String" itemvalue="Python.VisitSummary" />
+      <item index="4" class="java.lang.String" itemvalue="Python.sandbox.1" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.sandbox" />
-        <item index="1" class="java.lang.String" itemvalue="Python.VisitSummaryV3" />
-        <item index="2" class="java.lang.String" itemvalue="Python.VisitSummaryV3_auto_copy_muliti" />
-        <item index="3" class="java.lang.String" itemvalue="Python.VisitSummary_CURRENT" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.VisitSummary" />
+        <item index="1" class="java.lang.String" itemvalue="Python.sandbox.1" />
+        <item index="2" class="java.lang.String" itemvalue="Python.sandbox" />
+        <item index="3" class="java.lang.String" itemvalue="Python.VisitSummaryV3" />
+        <item index="4" class="java.lang.String" itemvalue="Python.VisitSummaryV3_auto_copy_muliti" />
       </list>
     </recent_temporary>
   </component>
@@ -224,11 +271,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27083334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09345238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31578946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28774616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -240,7 +289,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -262,7 +310,72 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#525#534#0" expanded="true" />
+            <element signature="e#679#694#0" expanded="true" />
+            <element signature="e#1012#4840#0" expanded="false" />
+            <element signature="e#2605#3198#0" expanded="false" />
+            <element signature="e#3232#3400#0" expanded="false" />
+            <element signature="e#3438#3727#0" expanded="false" />
+            <element signature="e#3770#4462#0" expanded="false" />
+            <element signature="e#4495#4609#0" expanded="false" />
+            <element signature="e#4644#4715#0" expanded="false" />
+            <element signature="e#4753#4840#0" expanded="false" />
+            <element signature="e#6341#6552#0" expanded="false" />
+            <element signature="e#6582#6868#0" expanded="false" />
+            <element signature="e#6901#7243#0" expanded="false" />
+            <element signature="e#7278#7667#0" expanded="false" />
+            <element signature="e#11852#13976#0" expanded="false" />
+            <element signature="e#14017#14258#0" expanded="false" />
+            <element signature="e#14260#14294#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VisitSummary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#679#694#0" expanded="true" />
+            <element signature="e#1012#4840#0" expanded="false" />
+            <element signature="e#2605#3198#0" expanded="false" />
+            <element signature="e#3232#3400#0" expanded="false" />
+            <element signature="e#3438#3727#0" expanded="false" />
+            <element signature="e#3770#4462#0" expanded="false" />
+            <element signature="e#4495#4609#0" expanded="false" />
+            <element signature="e#4644#4715#0" expanded="false" />
+            <element signature="e#4753#4840#0" expanded="false" />
+            <element signature="e#6341#6552#0" expanded="false" />
+            <element signature="e#6582#6868#0" expanded="false" />
+            <element signature="e#6901#7243#0" expanded="false" />
+            <element signature="e#7278#7667#0" expanded="false" />
+            <element signature="e#11852#13976#0" expanded="false" />
+            <element signature="e#14017#14258#0" expanded="false" />
+            <element signature="e#14260#14294#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VisitSummary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#679#694#0" expanded="true" />
+            <element signature="e#1012#4840#0" expanded="false" />
+            <element signature="e#2605#3198#0" expanded="false" />
+            <element signature="e#3232#3400#0" expanded="false" />
+            <element signature="e#3438#3727#0" expanded="false" />
+            <element signature="e#3770#4462#0" expanded="false" />
+            <element signature="e#4495#4609#0" expanded="false" />
+            <element signature="e#4644#4715#0" expanded="false" />
+            <element signature="e#4753#4840#0" expanded="false" />
+            <element signature="e#6341#6552#0" expanded="false" />
+            <element signature="e#6582#6868#0" expanded="false" />
+            <element signature="e#6901#7243#0" expanded="false" />
+            <element signature="e#7278#7667#0" expanded="false" />
+            <element signature="e#11852#13976#0" expanded="false" />
+            <element signature="e#14017#14258#0" expanded="false" />
+            <element signature="e#14260#14294#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -294,13 +407,6 @@
     <entry file="file://$PROJECT_DIR$/VisitSummaryV3_auto_copy_muliti.py" />
     <entry file="file://$PROJECT_DIR$/VisitSummary_CURRENT.py" />
     <entry file="file://$PROJECT_DIR$/VisitSummary_CURRENT.py" />
-    <entry file="file://$PROJECT_DIR$/sandbox.1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VisitSummaryV3_auto_copy_muliti.py" />
     <entry file="file://$PROJECT_DIR$/VisitSummaryV3.py" />
     <entry file="file://$PROJECT_DIR$/setup.py">
@@ -329,17 +435,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sandbox.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="81" column="3" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="3" />
+        <state relative-caret-position="-324">
+          <caret line="81" column="22" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/holidays.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox.1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="19" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/site-packages/pywinauto/application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8853">
+          <caret line="162" column="0" lean-forward="true" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VisitSummary.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="65" lean-forward="true" selection-start-line="43" selection-start-column="65" selection-end-line="43" selection-end-column="65" />
+        <state relative-caret-position="1530">
+          <caret line="216" column="44" lean-forward="true" selection-start-line="216" selection-start-column="44" selection-end-line="216" selection-end-column="44" />
           <folding>
-            <element signature="e#525#534#0" expanded="true" />
+            <element signature="e#679#694#0" expanded="true" />
+            <element signature="e#1012#4840#0" expanded="false" />
+            <element signature="e#2605#3198#0" expanded="false" />
+            <element signature="e#3232#3400#0" expanded="false" />
+            <element signature="e#3438#3727#0" expanded="false" />
+            <element signature="e#3770#4462#0" expanded="false" />
+            <element signature="e#4495#4609#0" expanded="false" />
+            <element signature="e#4644#4715#0" expanded="false" />
+            <element signature="e#4753#4840#0" expanded="false" />
+            <element signature="e#6341#6552#0" expanded="false" />
+            <element signature="e#6582#6868#0" expanded="false" />
+            <element signature="e#6901#7243#0" expanded="false" />
+            <element signature="e#7278#7667#0" expanded="false" />
+            <element signature="e#11852#13976#0" expanded="false" />
+            <element signature="e#14017#14258#0" expanded="false" />
+            <element signature="e#14260#14294#0" expanded="false" />
           </folding>
         </state>
       </provider>
