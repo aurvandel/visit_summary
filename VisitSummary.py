@@ -22,6 +22,7 @@ import sys
 import time
 import tkinter as Tkinter
 from tkinter import messagebox as tkMessageBox
+import tkinter.ttk as ttk
 
 import dateutil.rrule as rrule
 import docx
@@ -39,10 +40,6 @@ class InputDate(object):
     def __init__(self, requestMessage):
         self.font = ("Helvetica", 14)
         self.root = Tkinter.Tk()
-        menubar = Tkinter.Menu(self.root)
-        filemenu = Tkinter.Menu(menubar, tearoff=0)
-        filemenu.add_command(label="New", command=self.gettext)
-        self.root.config(menu=menubar)
         #Centers the window
         self.root.wm_attributes("-topmost", 1)
         self.root.update_idletasks()
@@ -50,7 +47,7 @@ class InputDate(object):
         height = self.root.winfo_height()
         x = (self.root.winfo_screenwidth() // 2) - (width // 2)
         y = (self.root.winfo_screenheight() // 2) - (height // 2)
-        self.root.geometry('{}x{}+{}+{}'.format(420, 170, x, y))
+        self.root.geometry('{}x{}+{}+{}'.format(420, 300, x, y))
         self.root.wm_iconbitmap("logo_icon.ico")
         self.root.title('Visit Summary Generator')
         self.string = ''
@@ -59,22 +56,32 @@ class InputDate(object):
         self.button_frame = Tkinter.Frame(self.root)
         ok_button = Tkinter.Button(self.root, text='OK', width=10, command=self.gettext)
         quit_button = Tkinter.Button(self.root, text='Cancel', width=10, command=lambda: sys.exit())
-        tomorrow_button = Tkinter.Button(self.root, text='Tomorrow', width=10, command=self.tomorrow)
+        #single_button = Tkinter.Button(self.root, text='Single Patient', width=10, command=self.single)
         next_bus_day_button = Tkinter.Button(self.root, text='Next Business Day', width=15, command=self.next_business_day)
         next_bus_day_button.place(x=105, y=120)
-        tomorrow_button.place(x=235, y=120)
+        #single_button.place(x=235, y=120)
         ok_button.place(x=10, y=120)
         quit_button.place(x=330, y=120)
         self.root.protocol("WM_DELETE_WINDOW", lambda: sys.exit())
         self.acceptInput(requestMessage)
         self.mHolidays = self.get_holidays()
+        self.singlePatientProvider = []
+        self.single = False
+        choices = []
+        self.patient = Tkinter.StringVar()
+        for item in provider_patient:
+            choices.append(str(item))
+        self.patient_combobox = ttk.Combobox(self.root, values=choices, textvariable=self.patient)
+        self.patient_combobox.bind("<<ComboboxSelected>>", self.singlePatient)
+        self.patient_combobox.place(x=10, y=180, width=350)
 
     def acceptInput(self, requestMessage):
         """ Creates tkinter labels and entry box"""
         r = self.frame
-        instructions = Tkinter.Label(r, text="Please have iCentra's Ambulatory Organizer window open and on the correct date.\
- Click Next Business Day or input the date of the schedule you're working on\
- and click OK.", wraplength=400)
+        instructions = Tkinter.Label(r, text="If working with multiple patients either enter the date and click OK or "
+                                             "click the Next Business Day button. For 1 patient click the Single "
+                                             "Patient button and select that patient from the drop down menu.",
+                                     wraplength=400)
         instructions.pack(side='top', pady=5)
         k = Tkinter.Label(r, text=requestMessage, font=self.font, padx=5)
         k.pack(side='left', pady=5)
@@ -82,11 +89,32 @@ class InputDate(object):
         self.e.pack(side='left')
         self.e.focus_set()
 
-    def tomorrow(self):
-        """Gets tomorrow's date"""
-        date = datetime.date.today() + datetime.timedelta(days=1)
-        self.string = date.strftime('%m/%d/%Y')
+    # def patientMenu(self):
+    #     """Print a single sheet date"""
+    #     # create a pulldown menu, and add it to the menu bar
+    #     menubar = Tkinter.Menu(self.root)
+    #     patientMenu = Tkinter.Menu(menubar, tearoff=0)
+    #     for item in provider_patient:
+    #         patientMenu.add_command(label=item[1], command=lambda: self.singlePatient(item))
+    #     menubar.add_cascade(label="Single Patient", menu=patientMenu)
+    #     self.root.config(menu=menubar)
+    #
+    # def singlePatient(self, item):
+    #     provider_patient = item
+    #     print(item)
+    #     return item
+
+    def singlePatient(self, event):
+        self.singlePatientProvider.append(self.patient.get().strip())  #TODO: See if strip command worked
+        self.single = True
+        self.string = self.e.get()
         self.root.destroy()
+
+    def getSingle(self):
+        return self.single
+
+    def getSinglePatientProvider(self):
+        return self.singlePatientProvider
 
     def get_holidays(self):
         """Gets list of holidays from file"""
@@ -164,12 +192,49 @@ class AllDoneMsgBox(InputDate):
         self.remaining = self.remaining - 1
         self.root.after(1000, self.countdown)
 
+# class singleSheet(InputDate):
+#     def __init__(self):
+#         """Message box to check for single or multiple patients"""
+#         self.font = ("Helvetica", 14)
+#         self.root = Tkinter.Tk()
+#         # Centers the window
+#         self.root.wm_attributes("-topmost", 1)
+#         self.root.update_idletasks()
+#         width = self.root.winfo_width()
+#         height = self.root.winfo_height()
+#         x = (self.root.winfo_screenwidth() // 2) - (width // 2)
+#         y = (self.root.winfo_screenheight() // 2) - (height // 2)
+#         self.root.geometry('{}x{}+{}+{}'.format(640, 480, x, y))
+#         self.root.wm_iconbitmap("logo_icon.ico")
+#         self.root.title('Visit Summary Generator')
+#         self.msg = "Click button for correct patient."
+#         self.w = Tkinter.Label(self.root, text=self.msg, font=self.font, wraplength=400)
+#         self.w.pack()
+#         self.label = Tkinter.Label(self.root, text="")
+#         self.label.pack()
+#         self.buttons()
+#         self.root.protocol("WM_DELETE_WINDOW", lambda: sys.exit())
+#
+#     def buttons(self):
+#         self.button_frame = Tkinter.Frame(self.root)
+#         ok_button = Tkinter.Button(self.root, text='OK', width=10, command=self.gettext)
+#         quit_button = Tkinter.Button(self.root, text='Cancel', width=10, command=lambda: sys.exit())
+#         single_button = Tkinter.Button(self.root, text='Single Patient', width=10, command=self.single)
+#         next_bus_day_button = Tkinter.Button(self.root, text='Next Business Day', width=15, command=self.next_business_day)
+#         next_bus_day_button.place(x=105, y=120)
+#         single_button.place(x=235, y=120)
+#         ok_button.place(x=10, y=120)
+#         quit_button.place(x=330, y=120)
+
 def getDate(requestMessage):
     """creates tkinter window to get user input"""
     msgBox = InputDate(requestMessage)
     #loop until the user makes a decision and the window is destroyed
     msgBox.waitForInput()
-    return msgBox.getString()
+    date = msgBox.getString()
+    single = msgBox.getSingle()
+    singlePatientProvider = msgBox.getSinglePatientProvider()
+    return date, single, singlePatientProvider
 
 def confirm_date(date):
     """creates tkinter window to confirm date"""
@@ -371,13 +436,17 @@ def done():
     box.waitForInput()
 
 if __name__ == "__main__":
-    flag = False
-    day = datetime.date.today()
-    while not flag:
-        day = getDate('Schedule date')
-        flag = confirm_date(day)
     path = os.path.join(CWD, "patient.docx")
+    flag = False
+    single = False
+    day = datetime.date.today()
     provider_patient = import_clip_board()
+    while not flag:
+        day, single, singlePatientProvider = getDate('Schedule date')
+        flag = confirm_date(day)
+    if single:
+        provider_patient = singlePatientProvider
+    print(singlePatientProvider, day)
     create_document(provider_patient, day)
-    print_word_document(path)
+    #print_word_document(path)
     done()
