@@ -12,7 +12,7 @@ required to the clipboard, save the data to a Word template and print the newly 
 document.
 
 """
-#TODO admin button that opens a txt file to change holidays
+
 
 import datetime
 import operator
@@ -22,13 +22,13 @@ import sys
 import time
 import tkinter as Tkinter
 from tkinter import messagebox as tkMessageBox
-import tkinter.ttk as ttk
 
 import dateutil.rrule as rrule
 import docx
 import docx.enum.text
 import docx.shared
 import pywinauto
+import win32api
 import win32com.client as client
 
 CWD = os.getcwd()
@@ -47,40 +47,50 @@ class InputDate(object):
         height = self.root.winfo_height()
         x = (self.root.winfo_screenwidth() // 2) - (width // 2)
         y = (self.root.winfo_screenheight() // 2) - (height // 2)
-        self.root.geometry('{}x{}+{}+{}'.format(420, 300, x, y))
+        self.root.geometry('{}x{}+{}+{}'.format(420, 160, x, y))
         self.root.wm_iconbitmap("logo_icon.ico")
         self.root.title('Visit Summary Generator')
         self.string = ''
         self.frame = Tkinter.Frame(self.root)
         self.frame.pack()
         self.button_frame = Tkinter.Frame(self.root)
-        ok_button = Tkinter.Button(self.root, text='OK', width=10, command=self.gettext)
-        quit_button = Tkinter.Button(self.root, text='Cancel', width=10, command=lambda: sys.exit())
+        ok_button = Tkinter.Button(self.root, text='OK', width=15, command=self.gettext)
+        quit_button = Tkinter.Button(self.root, text='Cancel', width=15, command=lambda: sys.exit())
         #single_button = Tkinter.Button(self.root, text='Single Patient', width=10, command=self.single)
         next_bus_day_button = Tkinter.Button(self.root, text='Next Business Day', width=15, command=self.next_business_day)
-        next_bus_day_button.place(x=105, y=120)
+        next_bus_day_button.place(x=155, y=110)
         #single_button.place(x=235, y=120)
-        ok_button.place(x=10, y=120)
-        quit_button.place(x=330, y=120)
+        ok_button.place(x=20, y=110)
+        quit_button.place(x=290, y=110)
         self.root.protocol("WM_DELETE_WINDOW", lambda: sys.exit())
         self.acceptInput(requestMessage)
         self.mHolidays = self.get_holidays()
-        self.singlePatientProvider = []
-        self.single = False
-        choices = []
-        self.patient = Tkinter.StringVar()
-        for item in provider_patient:
-            choices.append(str(item))
-        self.patient_combobox = ttk.Combobox(self.root, values=choices, textvariable=self.patient)
-        self.patient_combobox.bind("<<ComboboxSelected>>", self.singlePatient)
-        self.patient_combobox.place(x=10, y=180, width=350)
+        self.menuBar()
+        # self.singlePatientProvider = []
+        # self.single = False
+        # choices = []
+        # self.patient = Tkinter.StringVar()
+        # for item in provider_patient:
+        #     choices.append(str(item))
+        # self.patient_combobox = ttk.Combobox(self.root, values=choices, textvariable=self.patient)
+        # self.patient_combobox.bind("<<ComboboxSelected>>", self.singlePatient)
+        # self.patient_combobox.place(x=10, y=180, width=350)
+
+    def menuBar(self):
+        menubar = Tkinter.Menu(self.root)
+        adminMenu = Tkinter.Menu(menubar, tearoff=0)
+        adminMenu.add_command(label="Holidays", command=self.update_holidays)
+        menubar.add_cascade(label="File", menu=adminMenu)
+        self.root.config(menu=menubar)
+
+    def update_holidays(self):
+        win32api.ShellExecute(0, 'open', "holidays.txt", '', '', 1)
 
     def acceptInput(self, requestMessage):
         """ Creates tkinter labels and entry box"""
         r = self.frame
-        instructions = Tkinter.Label(r, text="If working with multiple patients either enter the date and click OK or "
-                                             "click the Next Business Day button. For 1 patient click the Single "
-                                             "Patient button and select that patient from the drop down menu.",
+        instructions = Tkinter.Label(r, text="With the PowerChart Ambulatory Organizer open to the correct date "
+                                             "click the Next Business Day button or enter the date and click OK.",
                                      wraplength=400)
         instructions.pack(side='top', pady=5)
         k = Tkinter.Label(r, text=requestMessage, font=self.font, padx=5)
@@ -104,17 +114,19 @@ class InputDate(object):
     #     print(item)
     #     return item
 
-    def singlePatient(self, event):
-        self.singlePatientProvider.append(self.patient.get().strip())  #TODO: See if strip command worked
-        self.single = True
-        self.string = self.e.get()
-        self.root.destroy()
-
-    def getSingle(self):
-        return self.single
-
-    def getSinglePatientProvider(self):
-        return self.singlePatientProvider
+    # def singlePatient(self, event):
+    #     selection = self.patient.get()
+    #     if 'Josh' in selection and 'Conner' in selection:
+    #         self.singlePatientProvider.append(('Josh Conner, CRT, RPSGT', ))
+    #     self.string = self.e.get()
+    #     self.single = True
+    #     self.root.destroy()
+    #
+    # def getSingle(self):
+    #     return self.single
+    #
+    # def getSinglePatientProvider(self):
+    #     return self.singlePatientProvider
 
     def get_holidays(self):
         """Gets list of holidays from file"""
@@ -175,13 +187,13 @@ class AllDoneMsgBox(InputDate):
         self.root.wm_iconbitmap("logo_icon.ico")
         self.root.title('Visit Summary Generator')
         self.msg = "Congratulations!\n Visit Summaries have all printed."
-        self.duration = 10000
+        self.duration = 5000
         self.w = Tkinter.Label(self.root, text=self.msg, font=self.font, wraplength=400)
         self.w.pack()
         self.label = Tkinter.Label(self.root, text="")
         self.label.pack()
         self.remaining = 0
-        self.countdown(10)
+        self.countdown(5)
         self.root.after(self.duration, self.root.destroy)
         self.root.protocol("WM_DELETE_WINDOW", lambda: sys.exit())
 
@@ -226,15 +238,52 @@ class AllDoneMsgBox(InputDate):
 #         ok_button.place(x=10, y=120)
 #         quit_button.place(x=330, y=120)
 
+class AutoPrintorOpen(InputDate):
+    def __init__(self):
+        """Auto print Word document or open Word document"""
+        self.font = ("Helvetica", 12)
+        self.root = Tkinter.Tk()
+        self.print_or_open = None
+        # Centers the window
+        self.root.wm_attributes("-topmost", 1)
+        self.root.update_idletasks()
+        width = self.root.winfo_width()
+        height = self.root.winfo_height()
+        x = (self.root.winfo_screenwidth() // 2) - (width // 2)
+        y = (self.root.winfo_screenheight() // 2) - (height // 2)
+        self.root.geometry('{}x{}+{}+{}'.format(420, 100, x, y))
+        self.root.wm_iconbitmap("logo_icon.ico")
+        self.root.title('Visit Summary Generator')
+        self.msg = "Please click the Auto Print button to print all of the pages or click the Open button to open Word"
+        self.w = Tkinter.Label(self.root, text=self.msg, font=self.font, wraplength=400)
+        self.w.pack()
+        self.button_frame = Tkinter.Frame(self.root)
+        print_button = Tkinter.Button(self.root, text='Print All', width=15, command=self.print)
+        quit_button = Tkinter.Button(self.root, text='Cancel', width=15, command=lambda: sys.exit())
+        open_button = Tkinter.Button(self.root, text='Open', width=15, command=self.open_word)
+        open_button.place(x=150, y=60)
+        print_button.place(x=10, y=60)
+        quit_button.place(x=290, y=60)
+        self.root.protocol("WM_DELETE_WINDOW", lambda: sys.exit())
+
+    def print(self):
+        self.print_or_open = True
+        self.root.destroy()
+
+    def open_word(self):
+        self.print_or_open = False
+        self.root.destroy()
+
+    def getPrintOrOpen(self):
+        return self.print_or_open
+
 def getDate(requestMessage):
     """creates tkinter window to get user input"""
     msgBox = InputDate(requestMessage)
     #loop until the user makes a decision and the window is destroyed
     msgBox.waitForInput()
     date = msgBox.getString()
-    single = msgBox.getSingle()
-    singlePatientProvider = msgBox.getSinglePatientProvider()
-    return date, single, singlePatientProvider
+    return date
 
 def confirm_date(date):
     """creates tkinter window to confirm date"""
@@ -435,18 +484,24 @@ def done():
     box = AllDoneMsgBox()
     box.waitForInput()
 
+def print_or_open():
+    box = AutoPrintorOpen()
+    box.waitForInput()
+    return box.getPrintOrOpen()
+
 if __name__ == "__main__":
     path = os.path.join(CWD, "patient.docx")
-    flag = False
-    single = False
+    correct_date = False
     day = datetime.date.today()
+    while not correct_date:
+        day = getDate('Schedule date')
+        correct_date = confirm_date(day)
     provider_patient = import_clip_board()
-    while not flag:
-        day, single, singlePatientProvider = getDate('Schedule date')
-        flag = confirm_date(day)
-    if single:
-        provider_patient = singlePatientProvider
-    print(singlePatientProvider, day)
+    printOrOpen = print_or_open()
     create_document(provider_patient, day)
-    #print_word_document(path)
-    done()
+    if printOrOpen:
+        print_word_document(path)
+        done()
+    else:
+        win32api.ShellExecute(0, 'open', path, '', '', 1)
+
