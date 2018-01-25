@@ -22,6 +22,7 @@ import sys
 import time
 import tkinter as Tkinter
 from tkinter import messagebox as tkMessageBox
+import subprocess
 
 import dateutil.rrule as rrule
 import docx
@@ -47,7 +48,7 @@ class InputDate(object):
         height = self.root.winfo_height()
         x = (self.root.winfo_screenwidth() // 2) - (width // 2)
         y = (self.root.winfo_screenheight() // 2) - (height // 2)
-        self.root.geometry('{}x{}+{}+{}'.format(420, 160, x, y))
+        self.root.geometry('{}x{}+{}+{}'.format(420, 180, x, y))
         self.root.wm_iconbitmap("logo_icon.ico")
         self.root.title('Visit Summary Generator')
         self.string = ''
@@ -80,11 +81,14 @@ class InputDate(object):
         menubar = Tkinter.Menu(self.root)
         adminMenu = Tkinter.Menu(menubar, tearoff=0)
         adminMenu.add_command(label="Holidays", command=self.update_holidays)
-        menubar.add_cascade(label="File", menu=adminMenu)
+        menubar.add_cascade(label="Admin", menu=adminMenu)
         self.root.config(menu=menubar)
 
     def update_holidays(self):
-        win32api.ShellExecute(0, 'open', "holidays.txt", '', '', 1)
+        filename = os.path.join(CWD, 'holidays.txt')
+        child = subprocess.Popen(['notepad.exe', filename])
+        child.wait()
+        self.mHolidays = self.get_holidays()
 
     def acceptInput(self, requestMessage):
         """ Creates tkinter labels and entry box"""
@@ -130,7 +134,8 @@ class InputDate(object):
 
     def get_holidays(self):
         """Gets list of holidays from file"""
-        with open('holidays.txt') as fin:
+        filename = os.path.join(CWD, 'holidays.txt')
+        with open(filename) as fin:
             holidays = [line.rstrip('\n') for line in fin]
         holidays = holidays[5:]
         format_holidays = [datetime.datetime.strptime(x, '%m/%d/%Y') for x in holidays]
@@ -254,7 +259,7 @@ class AutoPrintorOpen(InputDate):
         self.root.geometry('{}x{}+{}+{}'.format(420, 100, x, y))
         self.root.wm_iconbitmap("logo_icon.ico")
         self.root.title('Visit Summary Generator')
-        self.msg = "Please click the Auto Print button to print all of the pages or click the Open button to open Word"
+        self.msg = "Please click the Print All button to print all of the pages or click the Open button to open Word"
         self.w = Tkinter.Label(self.root, text=self.msg, font=self.font, wraplength=400)
         self.w.pack()
         self.button_frame = Tkinter.Frame(self.root)
@@ -490,6 +495,7 @@ def print_or_open():
     return box.getPrintOrOpen()
 
 if __name__ == "__main__":
+
     path = os.path.join(CWD, "patient.docx")
     correct_date = False
     day = datetime.date.today()
