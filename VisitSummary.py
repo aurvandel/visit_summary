@@ -33,6 +33,12 @@ import win32api
 import win32com.client as client
 
 CWD = os.getcwd()
+LOGO = os.path.join(CWD, 'data_files/logo_icon.ico')
+HOLIDAYS = os.path.join(CWD, 'data_files/holidays.txt')
+TEMPLATE = os.path.join(CWD, "data_files/template.docx")
+DRSDC_LOGO = os.path.join(CWD, "data_files/DRSDC_V_3CPT.bmp")
+AASM_LOGO = os.path.join(CWD, "data_files/Accredited Center logo.bmp")
+SAVE_PATH = os.path.join(CWD, 'data_files/patient.docx')
 
 class InputDate(object):
 
@@ -49,7 +55,7 @@ class InputDate(object):
         x = (self.root.winfo_screenwidth() // 2) - (width // 2)
         y = (self.root.winfo_screenheight() // 2) - (height // 2)
         self.root.geometry('{}x{}+{}+{}'.format(420, 180, x, y))
-        self.root.wm_iconbitmap("logo_icon.ico")
+        self.root.wm_iconbitmap(LOGO)
         self.root.title('Visit Summary Generator')
         self.string = ''
         self.frame = Tkinter.Frame(self.root)
@@ -85,9 +91,7 @@ class InputDate(object):
         self.root.config(menu=menubar)
 
     def update_holidays(self):
-        filename = os.path.join(CWD, 'holidays.txt')
-        child = subprocess.Popen(['notepad.exe', filename])
-        child.wait()
+        child = subprocess.Popen(['notepad.exe', HOLIDAYS])
         self.mHolidays = self.get_holidays()
 
     def acceptInput(self, requestMessage):
@@ -134,8 +138,8 @@ class InputDate(object):
 
     def get_holidays(self):
         """Gets list of holidays from file"""
-        filename = os.path.join(CWD, 'holidays.txt')
-        with open(filename) as fin:
+        # filename = os.path.join(CWD, 'holidays.txt')
+        with open(HOLIDAYS) as fin:
             holidays = [line.rstrip('\n') for line in fin]
         holidays = holidays[5:]
         format_holidays = [datetime.datetime.strptime(x, '%m/%d/%Y') for x in holidays]
@@ -189,7 +193,7 @@ class AllDoneMsgBox(InputDate):
         x = (self.root.winfo_screenwidth() // 2) - (width // 2)
         y = (self.root.winfo_screenheight() // 2) - (height // 2)
         self.root.geometry('{}x{}+{}+{}'.format(380, 90, x, y))
-        self.root.wm_iconbitmap("logo_icon.ico")
+        self.root.wm_iconbitmap(LOGO)
         self.root.title('Visit Summary Generator')
         self.msg = "Congratulations!\n Visit Summaries have all printed."
         self.duration = 5000
@@ -257,7 +261,7 @@ class AutoPrintorOpen(InputDate):
         x = (self.root.winfo_screenwidth() // 2) - (width // 2)
         y = (self.root.winfo_screenheight() // 2) - (height // 2)
         self.root.geometry('{}x{}+{}+{}'.format(420, 100, x, y))
-        self.root.wm_iconbitmap("logo_icon.ico")
+        self.root.wm_iconbitmap(LOGO)
         self.root.title('Visit Summary Generator')
         self.msg = "Please click the Print All button to print all of the pages or click the Open button to open Word"
         self.w = Tkinter.Label(self.root, text=self.msg, font=self.font, wraplength=400)
@@ -426,8 +430,8 @@ def create_document(schedule, day):
         if char not in excluded:
             new_day += char
     day = new_day
-    template_path = os.path.join(CWD, "template.docx")
-    doc = docx.Document(template_path)
+    # template_path = os.path.join(CWD, "template.docx")
+    doc = docx.Document(TEMPLATE)
     doc._body.clear_content()
     for i in range(len(schedule)):
         table = doc.add_table(rows=3, cols=2)
@@ -448,10 +452,10 @@ def create_document(schedule, day):
         paragraph_format = paragraph.paragraph_format
         paragraph_format.alignment = docx.enum.text.WD_ALIGN_PARAGRAPH.RIGHT
         run = paragraph.add_run()
-        drsdc_logo_path = os.path.join(CWD, "DRSDC_V_3CPT.bmp")
-        run.add_picture(drsdc_logo_path, height=docx.shared.Inches(1.0))
-        aasm_logo_path = os.path.join(CWD, "Accredited Center logo.bmp")
-        run.add_picture(aasm_logo_path, height=docx.shared.Inches(0.5))
+        # drsdc_logo_path = os.path.join(CWD, "DRSDC_V_3CPT.bmp")
+        run.add_picture(DRSDC_LOGO, height=docx.shared.Inches(1.0))
+        # aasm_logo_path = os.path.join(CWD, "Accredited Center logo.bmp")
+        run.add_picture(AASM_LOGO, height=docx.shared.Inches(0.5))
 
         # obj_styles = doc.styles
         # obj_charstyle = obj_styles.add_style('TitleStyle', docx.enum.style.WD_STYLE_TYPE.CHARACTER)
@@ -467,8 +471,8 @@ def create_document(schedule, day):
             pass
         else:
             doc.add_page_break()
-    save_path = os.path.join(CWD, 'patient.docx')
-    doc.save(save_path)
+    # save_path = os.path.join(CWD, 'patient.docx')
+    doc.save(SAVE_PATH)
 
 def print_word_document(filename):
     """Opens the document in Word, prints it and closes Word"""
@@ -496,7 +500,6 @@ def print_or_open():
 
 if __name__ == "__main__":
 
-    path = os.path.join(CWD, "patient.docx")
     correct_date = False
     day = datetime.date.today()
     while not correct_date:
@@ -506,8 +509,8 @@ if __name__ == "__main__":
     printOrOpen = print_or_open()
     create_document(provider_patient, day)
     if printOrOpen:
-        print_word_document(path)
+        print_word_document(SAVE_PATH)
         done()
     else:
-        win32api.ShellExecute(0, 'open', path, '', '', 1)
+        win32api.ShellExecute(0, 'open', SAVE_PATH, '', '', 1)
 

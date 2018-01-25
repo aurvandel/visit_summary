@@ -8,19 +8,18 @@ PYTHON_INSTALL_DIR = os.path.dirname(os.path.dirname(os.__file__))
 os.environ['TCL_LIBRARY'] = os.path.join(PYTHON_INSTALL_DIR, 'tcl', 'tcl8.6')
 os.environ['TK_LIBRARY'] = os.path.join(PYTHON_INSTALL_DIR, 'tcl', 'tk8.6')
 
-added_files = ['Accredited Center logo.bmp', 'DRSDC and AASM.bmp', 'DRSDC_V_3CPT.bmp', 'holidays.txt', 'logo_icon.ico',
-               'patient.docx', 'template.docx',
+added_files = ['data_files/',
                os.path.join(PYTHON_INSTALL_DIR, 'DLLs', 'tk86t.dll'),
                os.path.join(PYTHON_INSTALL_DIR, 'DLLs', 'tcl86t.dll'),
                ]
 
-buildOptions = dict(packages=[], excludes=[], include_files=added_files)
+buildOptions = dict(packages=[], excludes=[], include_files=added_files, build_exe='Visit Summary')
 
 import sys
 base = 'Win32GUI' if sys.platform == 'win32' else None
 
 executables = [
-    Executable('VisitSummary.py', base=base, icon='logo_icon.ico')
+    Executable('VisitSummary.py', base=base, icon='data_files/logo_icon.ico')
 ]
 
 setup(name='Visit Summary',
